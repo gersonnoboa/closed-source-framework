@@ -10,6 +10,7 @@
 		313132E3264045BA0096CF0C /* ClosedSourceFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 313132E1264045BA0096CF0C /* ClosedSourceFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		313132EA264045CF0096CF0C /* ClosedSourceStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313132E9264045CF0096CF0C /* ClosedSourceStruct.swift */; };
 		313132ED264045E60096CF0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 313132EC264045E60096CF0C /* Alamofire */; };
+		3148417026412CB800A820EA /* TwilioVoice in Frameworks */ = {isa = PBXBuildFile; productRef = 3148416F26412CB800A820EA /* TwilioVoice */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				313132ED264045E60096CF0C /* Alamofire in Frameworks */,
+				3148417026412CB800A820EA /* TwilioVoice in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			name = ClosedSourceFramework;
 			packageProductDependencies = (
 				313132EC264045E60096CF0C /* Alamofire */,
+				3148416F26412CB800A820EA /* TwilioVoice */,
 			);
 			productName = ClosedSourceFramework;
 			productReference = 313132DE264045BA0096CF0C /* ClosedSourceFramework.framework */;
@@ -117,6 +120,7 @@
 			mainGroup = 313132D4264045BA0096CF0C;
 			packageReferences = (
 				313132EB264045E60096CF0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3148416E26412CB800A820EA /* XCRemoteSwiftPackageReference "twilio-voice-ios" */,
 			);
 			productRefGroup = 313132DF264045BA0096CF0C /* Products */;
 			projectDirPath = "";
@@ -291,6 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glia.ClosedSourceFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glia.ClosedSourceFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +360,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		3148416E26412CB800A820EA /* XCRemoteSwiftPackageReference "twilio-voice-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gersonnoboa/twilio-voice-ios/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -361,6 +375,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 313132EB264045E60096CF0C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		3148416F26412CB800A820EA /* TwilioVoice */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3148416E26412CB800A820EA /* XCRemoteSwiftPackageReference "twilio-voice-ios" */;
+			productName = TwilioVoice;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

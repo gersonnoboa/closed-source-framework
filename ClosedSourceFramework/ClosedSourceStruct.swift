@@ -1,9 +1,11 @@
 import Alamofire
 import Foundation
+import TwilioVoice
 
 public struct ClosedSourceStruct {
     public let string = "ClosedSourceFramework is providing this"
-    
+    public let twilioVoiceError = TwilioVoiceSDK.Error.errorAccessForbiddenError
+
     public init() {
         
     }
